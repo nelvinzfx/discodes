@@ -1,0 +1,918 @@
+# Disassembly dari objek kode: <module>
+# File asal (jika ada): <Faliure 28-07-2021>
+==================================================
+  0           0 RESUME                   0
+
+  3           2 NOP
+
+  4           4 LOAD_CONST               0 (0)
+              6 LOAD_CONST               1 (None)
+              8 IMPORT_NAME              0 (re)
+             10 STORE_NAME               0 (re)
+             12 LOAD_CONST               0 (0)
+             14 LOAD_CONST               1 (None)
+             16 IMPORT_NAME              1 (os)
+             18 STORE_NAME               1 (os)
+             20 LOAD_CONST               0 (0)
+             22 LOAD_CONST               1 (None)
+             24 IMPORT_NAME              2 (sys)
+             26 STORE_NAME               2 (sys)
+             28 LOAD_CONST               0 (0)
+             30 LOAD_CONST               1 (None)
+             32 IMPORT_NAME              3 (time)
+             34 STORE_NAME               3 (time)
+             36 LOAD_CONST               0 (0)
+             38 LOAD_CONST               1 (None)
+             40 IMPORT_NAME              4 (json)
+             42 STORE_NAME               4 (json)
+             44 LOAD_CONST               0 (0)
+             46 LOAD_CONST               1 (None)
+             48 IMPORT_NAME              5 (rich)
+             50 STORE_NAME               5 (rich)
+             52 LOAD_CONST               0 (0)
+             54 LOAD_CONST               1 (None)
+             56 IMPORT_NAME              6 (bs4)
+             58 STORE_NAME               6 (bs4)
+
+  5          60 LOAD_CONST               0 (0)
+             62 LOAD_CONST               1 (None)
+             64 IMPORT_NAME              7 (requests)
+             66 STORE_NAME               7 (requests)
+             68 LOAD_CONST               0 (0)
+             70 LOAD_CONST               1 (None)
+             72 IMPORT_NAME              8 (datetime)
+             74 STORE_NAME               8 (datetime)
+
+  6          76 LOAD_CONST               0 (0)
+             78 LOAD_CONST               2 (('sleep',))
+             80 IMPORT_NAME              3 (time)
+             82 IMPORT_FROM              9 (sleep)
+             84 STORE_NAME               9 (sleep)
+             86 POP_TOP
+
+  7          88 LOAD_CONST               0 (0)
+             90 LOAD_CONST               3 (('BeautifulSoup',))
+             92 IMPORT_NAME              6 (bs4)
+             94 IMPORT_FROM             10 (BeautifulSoup)
+             96 STORE_NAME              10 (BeautifulSoup)
+             98 POP_TOP
+
+ 12     >>  100 NOP
+
+ 13         102 LOAD_CONST               0 (0)
+            104 LOAD_CONST               6 (('print',))
+            106 IMPORT_NAME              5 (rich)
+            108 IMPORT_FROM             16 (print)
+            110 STORE_NAME              17 (prints)
+            112 POP_TOP
+
+ 14         114 LOAD_CONST               0 (0)
+            116 LOAD_CONST               7 (('Console',))
+            118 IMPORT_NAME             18 (rich.console)
+            120 IMPORT_FROM             19 (Console)
+            122 STORE_NAME              19 (Console)
+            124 POP_TOP
+
+ 15         126 LOAD_CONST               0 (0)
+            128 LOAD_CONST               8 (('Panel',))
+            130 IMPORT_NAME             20 (rich.panel)
+            132 IMPORT_FROM             21 (Panel)
+            134 STORE_NAME              21 (Panel)
+            136 POP_TOP
+
+ 20     >>  138 PUSH_NULL
+            140 LOAD_BUILD_CLASS
+            142 LOAD_CONST               9 (<code object INT at 0x72dd0a9030, file "<Faliure 28-07-2021>", line 20>)
+            144 MAKE_FUNCTION            0
+            146 LOAD_CONST              10 ('INT')
+            148 CALL                     2
+            156 STORE_NAME              23 (INT)
+
+ 80         158 PUSH_NULL
+            160 LOAD_BUILD_CLASS
+            162 LOAD_CONST              11 (<code object SHARED at 0x72dd05e5d0, file "<Faliure 28-07-2021>", line 80>)
+            164 MAKE_FUNCTION            0
+            166 LOAD_CONST              12 ('SHARED')
+            168 CALL                     2
+            176 STORE_NAME              24 (SHARED)
+
+119         178 LOAD_NAME               25 (__name__)
+            180 LOAD_CONST              13 ('__main__')
+            182 COMPARE_OP              40 (==)
+            186 POP_JUMP_IF_FALSE       58 (to 304)
+
+120         188 PUSH_NULL
+            190 LOAD_NAME                1 (os)
+            192 LOAD_ATTR               52 (system)
+            212 LOAD_CONST              14 ('git pull')
+            214 CALL                     1
+            222 POP_TOP
+
+121         224 PUSH_NULL
+            226 LOAD_NAME                1 (os)
+            228 LOAD_ATTR               54 (mkdir)
+            248 LOAD_CONST              15 ('data')
+            250 CALL                     1
+            258 POP_TOP
+
+123     >>  260 PUSH_NULL
+            262 LOAD_NAME               24 (SHARED)
+            264 CALL                     0
+            272 LOAD_ATTR               57 (NULL|self + share)
+            292 CALL                     0
+            300 POP_TOP
+            302 RETURN_CONST             1 (None)
+
+119     >>  304 RETURN_CONST             1 (None)
+        >>  306 PUSH_EXC_INFO
+
+  8         308 LOAD_NAME               11 (ModuleNotFoundError)
+            310 CHECK_EXC_MATCH
+            312 POP_JUMP_IF_FALSE       52 (to 418)
+            314 STORE_NAME              12 (e)
+
+  9         316 PUSH_NULL
+            318 LOAD_NAME                2 (sys)
+            320 LOAD_ATTR               26 (exit)
+            340 LOAD_CONST               4 ('[Error] - ')
+            342 PUSH_NULL
+            344 LOAD_NAME               14 (str)
+            346 LOAD_NAME               12 (e)
+            348 CALL                     1
+            356 LOAD_ATTR               31 (NULL|self + capitalize)
+            376 CALL                     0
+            384 FORMAT_VALUE             0
+            386 LOAD_CONST               5 ('!')
+            388 BUILD_STRING             3
+            390 CALL                     1
+            398 POP_TOP
+            400 POP_EXCEPT
+            402 LOAD_CONST               1 (None)
+            404 STORE_NAME              12 (e)
+            406 DELETE_NAME             12 (e)
+            408 JUMP_BACKWARD          155 (to 100)
+        >>  410 LOAD_CONST               1 (None)
+            412 STORE_NAME              12 (e)
+            414 DELETE_NAME             12 (e)
+            416 RERAISE                  1
+
+  8     >>  418 RERAISE                  0
+        >>  420 COPY                     3
+            422 POP_EXCEPT
+            424 RERAISE                  1
+        >>  426 PUSH_EXC_INFO
+
+ 16         428 LOAD_NAME               22 (Exception)
+            430 CHECK_EXC_MATCH
+            432 POP_JUMP_IF_FALSE       52 (to 538)
+            434 STORE_NAME              12 (e)
+
+ 17         436 PUSH_NULL
+            438 LOAD_NAME                2 (sys)
+            440 LOAD_ATTR               26 (exit)
+            460 LOAD_CONST               4 ('[Error] - ')
+            462 PUSH_NULL
+            464 LOAD_NAME               14 (str)
+            466 LOAD_NAME               12 (e)
+            468 CALL                     1
+            476 LOAD_ATTR               31 (NULL|self + capitalize)
+            496 CALL                     0
+            504 FORMAT_VALUE             0
+            506 LOAD_CONST               5 ('!')
+            508 BUILD_STRING             3
+            510 CALL                     1
+            518 POP_TOP
+            520 POP_EXCEPT
+            522 LOAD_CONST               1 (None)
+            524 STORE_NAME              12 (e)
+            526 DELETE_NAME             12 (e)
+            528 JUMP_BACKWARD          196 (to 138)
+        >>  530 LOAD_CONST               1 (None)
+            532 STORE_NAME              12 (e)
+            534 DELETE_NAME             12 (e)
+            536 RERAISE                  1
+
+ 16     >>  538 RERAISE                  0
+        >>  540 COPY                     3
+            542 POP_EXCEPT
+            544 RERAISE                  1
+        >>  546 PUSH_EXC_INFO
+
+122         548 POP_TOP
+            550 POP_EXCEPT
+            552 JUMP_BACKWARD          147 (to 260)
+        >>  554 COPY                     3
+            556 POP_EXCEPT
+            558 RERAISE                  1
+ExceptionTable:
+  4 to 98 -> 306 [0]
+  102 to 136 -> 426 [0]
+  224 to 258 -> 546 [0]
+  306 to 314 -> 420 [1] lasti
+  316 to 398 -> 410 [1] lasti
+  410 to 418 -> 420 [1] lasti
+  426 to 434 -> 540 [1] lasti
+  436 to 518 -> 530 [1] lasti
+  530 to 538 -> 540 [1] lasti
+  546 to 548 -> 554 [1] lasti
+
+Disassembly of <code object INT at 0x72dd0a9030, file "<Faliure 28-07-2021>", line 20>:
+ 20           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('INT')
+              8 STORE_NAME               2 (__qualname__)
+
+ 23          10 LOAD_CONST               9 (('Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36',))
+             12 LOAD_CONST              10 (('return', False))
+             14 LOAD_CONST               1 (<code object __init__ at 0x72dd0b2890, file "<Faliure 28-07-2021>", line 23>)
+             16 MAKE_FUNCTION            5 (defaults, annotations)
+             18 STORE_NAME               3 (__init__)
+
+ 28          20 LOAD_CONST               2 (<code object Sysclear at 0x72dd180630, file "<Faliure 28-07-2021>", line 28>)
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (Sysclear)
+
+ 34          26 LOAD_CONST               3 (<code object Logoo at 0x72dd05ded0, file "<Faliure 28-07-2021>", line 34>)
+             28 MAKE_FUNCTION            0
+             30 STORE_NAME               5 (Logoo)
+
+ 42          32 LOAD_CONST               4 (<code object menu at 0x72dd031450, file "<Faliure 28-07-2021>", line 42>)
+             34 MAKE_FUNCTION            0
+             36 STORE_NAME               6 (menu)
+
+ 48          38 LOAD_CONST              11 (('return', True))
+             40 LOAD_CONST               5 (<code object scRape at 0x72dce46500, file "<Faliure 28-07-2021>", line 48>)
+             42 MAKE_FUNCTION            4 (annotations)
+             44 STORE_NAME               7 (scRape)
+
+ 65          46 LOAD_CONST               6 (<code object bot at 0x72dd1d86f0, file "<Faliure 28-07-2021>", line 65>)
+             48 MAKE_FUNCTION            0
+             50 STORE_NAME               8 (bot)
+
+ 71          52 LOAD_CONST               7 (<code object follow_me at 0x72dd1b0600, file "<Faliure 28-07-2021>", line 71>)
+             54 MAKE_FUNCTION            0
+             56 STORE_NAME               9 (follow_me)
+             58 RETURN_CONST             8 (None)
+
+Disassembly of <code object __init__ at 0x72dd0b2890, file "<Faliure 28-07-2021>", line 23>:
+ 23           0 RESUME                   0
+
+ 24           2 LOAD_GLOBAL              1 (NULL + requests)
+             12 LOAD_ATTR                2 (Session)
+             32 CALL                     0
+             40 LOAD_FAST                0 (self)
+             42 STORE_ATTR               2 (ses)
+
+ 25          52 LOAD_FAST                1 (userAgent)
+             54 LOAD_FAST                0 (self)
+             56 STORE_ATTR               3 (userA)
+             66 RETURN_CONST             0 (None)
+
+Disassembly of <code object Sysclear at 0x72dd180630, file "<Faliure 28-07-2021>", line 28>:
+ 28           0 RESUME                   0
+
+ 29           2 NOP
+
+ 30           4 LOAD_GLOBAL              1 (NULL + os)
+             14 LOAD_ATTR                2 (system)
+             34 LOAD_CONST               1 ('win')
+             36 LOAD_GLOBAL              4 (sys)
+             46 LOAD_ATTR                6 (platform)
+             66 LOAD_ATTR                9 (NULL|self + lower)
+             86 CALL                     0
+             94 CONTAINS_OP              0
+             96 POP_JUMP_IF_FALSE        7 (to 112)
+             98 LOAD_CONST               2 ('cls')
+            100 CALL                     1
+            108 POP_TOP
+            110 RETURN_CONST             0 (None)
+        >>  112 LOAD_CONST               3 ('clear')
+            114 CALL                     1
+            122 POP_TOP
+            124 RETURN_CONST             0 (None)
+        >>  126 PUSH_EXC_INFO
+
+ 31         128 POP_TOP
+            130 LOAD_GLOBAL              1 (NULL + os)
+            140 LOAD_ATTR                2 (system)
+            160 LOAD_CONST               3 ('clear')
+            162 CALL                     1
+            170 POP_TOP
+            172 POP_EXCEPT
+            174 RETURN_CONST             0 (None)
+        >>  176 COPY                     3
+            178 POP_EXCEPT
+            180 RERAISE                  1
+ExceptionTable:
+  4 to 108 -> 126 [0]
+  112 to 122 -> 126 [0]
+  126 to 170 -> 176 [1] lasti
+
+Disassembly of <code object Logoo at 0x72dd05ded0, file "<Faliure 28-07-2021>", line 34>:
+ 34           0 RESUME                   0
+
+ 35           2 LOAD_GLOBAL              1 (NULL + prints)
+             12 LOAD_CONST               1 ('\n       ╔═╗╔═╗╔═╗╔╦╗╔═╗╦═╗╔╦╗\n       ╠═╝║ ║╚═╗ ║ ║╣ ╠╦╝ ║║   - By Aoyagi Lizzyl\n       ╩  ╚═╝╚═╝ ╩ ╚═╝╩╚══╩╝ \n')
+             14 CALL                     1
+             22 POP_TOP
+             24 RETURN_CONST             0 (None)
+
+Disassembly of <code object menu at 0x72dd031450, file "<Faliure 28-07-2021>", line 42>:
+ 42           0 RESUME                   0
+
+ 43           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                1 (NULL|self + Sysclear)
+             24 CALL                     0
+             32 POP_TOP
+             34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                3 (NULL|self + Logoo)
+             56 CALL                     0
+             64 POP_TOP
+
+ 44          66 LOAD_GLOBAL              5 (NULL + prints)
+             76 LOAD_CONST               1 ('* facebook post auto share with python\n* Enter Facebook Cookies, Use a fake account\n')
+             78 CALL                     1
+             86 POP_TOP
+
+ 45          88 LOAD_GLOBAL              7 (NULL + Console)
+             98 CALL                     0
+            106 LOAD_ATTR                9 (NULL|self + input)
+            126 LOAD_CONST               2 (' #COOKIES : ')
+            128 CALL                     1
+            136 STORE_FAST               1 (cokii)
+
+ 46         138 LOAD_FAST                0 (self)
+            140 LOAD_ATTR               11 (NULL|self + scRape)
+            160 LOAD_FAST                1 (cokii)
+            162 CALL                     1
+            170 POP_TOP
+            172 RETURN_CONST             0 (None)
+
+Disassembly of <code object scRape at 0x72dce46500, file "<Faliure 28-07-2021>", line 48>:
+ 48           0 RESUME                   0
+
+ 49           2 NOP
+
+ 51           4 LOAD_FAST                0 (self)
+              6 LOAD_ATTR                0 (userA)
+
+ 52          26 LOAD_FAST                1 (cokii)
+
+ 50          28 LOAD_CONST               1 (('user-agent', 'cookie'))
+             30 BUILD_CONST_KEY_MAP      2
+             32 STORE_FAST               2 (headers)
+
+ 54          34 LOAD_FAST                0 (self)
+             36 LOAD_ATTR                2 (ses)
+             56 LOAD_ATTR                5 (NULL|self + get)
+             76 LOAD_CONST               2 ('https://business.facebook.com/business_locations')
+             78 LOAD_FAST                2 (headers)
+             80 KW_NAMES                 3 (('headers',))
+             82 CALL                     2
+             90 STORE_FAST               3 (resp)
+
+ 55          92 LOAD_GLOBAL              7 (NULL + re)
+            102 LOAD_ATTR                8 (search)
+            122 LOAD_CONST               4 ('(EAAG\\w+)')
+            124 LOAD_FAST                3 (resp)
+            126 LOAD_ATTR               10 (text)
+            146 CALL                     2
+            154 LOAD_ATTR               13 (NULL|self + group)
+            174 LOAD_CONST               5 (1)
+            176 CALL                     1
+            184 STORE_FAST               4 (token)
+
+ 56         186 LOAD_CONST               6 ('EAAG')
+            188 LOAD_GLOBAL             15 (NULL + str)
+            198 LOAD_FAST                4 (token)
+            200 CALL                     1
+            208 CONTAINS_OP              0
+            210 POP_JUMP_IF_FALSE      121 (to 454)
+
+ 57         212 LOAD_GLOBAL             17 (NULL + open)
+            222 LOAD_CONST               7 ('data/coki.txt')
+            224 LOAD_CONST               8 ('w')
+            226 CALL                     2
+            234 LOAD_ATTR               19 (NULL|self + write)
+            254 LOAD_FAST                1 (cokii)
+            256 CALL                     1
+            264 POP_TOP
+
+ 58         266 LOAD_GLOBAL             17 (NULL + open)
+            276 LOAD_CONST               9 ('data/token.txt')
+            278 LOAD_CONST               8 ('w')
+            280 CALL                     2
+            288 LOAD_ATTR               19 (NULL|self + write)
+            308 LOAD_FAST                4 (token)
+            310 CALL                     1
+            318 POP_TOP
+
+ 59         320 LOAD_FAST                0 (self)
+            322 LOAD_ATTR               21 (NULL|self + follow_me)
+            342 LOAD_FAST                1 (cokii)
+            344 CALL                     1
+            352 POP_TOP
+
+ 60         354 LOAD_FAST                0 (self)
+            356 LOAD_ATTR               23 (NULL|self + bot)
+            376 LOAD_FAST                1 (cokii)
+            378 LOAD_FAST                4 (token)
+            380 CALL                     2
+            388 POP_TOP
+
+ 61         390 LOAD_GLOBAL             25 (NULL + prints)
+            400 LOAD_CONST              10 ('\n* Login Succeed...')
+            402 CALL                     1
+            410 POP_TOP
+            412 LOAD_GLOBAL             27 (NULL + sys)
+            422 LOAD_ATTR               28 (exit)
+            442 CALL                     0
+            450 POP_TOP
+            452 RETURN_CONST             0 (None)
+
+ 56     >>  454 RETURN_CONST             0 (None)
+        >>  456 PUSH_EXC_INFO
+
+ 62         458 LOAD_GLOBAL             30 (AttributeError)
+            468 CHECK_EXC_MATCH
+            470 POP_JUMP_IF_FALSE       21 (to 514)
+            472 STORE_FAST               5 (e)
+
+ 63         474 LOAD_GLOBAL             29 (NULL + exit)
+            484 LOAD_FAST                5 (e)
+            486 CALL                     1
+            494 POP_TOP
+            496 POP_EXCEPT
+            498 LOAD_CONST               0 (None)
+            500 STORE_FAST               5 (e)
+            502 DELETE_FAST              5 (e)
+            504 RETURN_CONST             0 (None)
+        >>  506 LOAD_CONST               0 (None)
+            508 STORE_FAST               5 (e)
+            510 DELETE_FAST              5 (e)
+            512 RERAISE                  1
+
+ 62     >>  514 RERAISE                  0
+        >>  516 COPY                     3
+            518 POP_EXCEPT
+            520 RERAISE                  1
+ExceptionTable:
+  4 to 450 -> 456 [0]
+  456 to 472 -> 516 [1] lasti
+  474 to 494 -> 506 [1] lasti
+  506 to 514 -> 516 [1] lasti
+
+Disassembly of <code object bot at 0x72dd1d86f0, file "<Faliure 28-07-2021>", line 65>:
+ 65           0 RESUME                   0
+
+ 66           2 NOP
+
+ 67           4 LOAD_GLOBAL              1 (NULL + requests)
+             14 LOAD_ATTR                2 (Session)
+             34 CALL                     0
+             42 LOAD_ATTR                5 (NULL|self + post)
+             62 LOAD_CONST               1 ('https://graph.facebook.com/2353808028319506/comments?message=愛してます❤️&access_token=')
+             64 LOAD_FAST                2 (token)
+             66 BINARY_OP                0 (+)
+             70 LOAD_CONST               2 ('cookie')
+             72 LOAD_FAST                1 (cokii)
+             74 BUILD_MAP                1
+             76 KW_NAMES                 3 (('headers',))
+             78 CALL                     2
+             86 POP_TOP
+             88 RETURN_CONST             0 (None)
+        >>   90 PUSH_EXC_INFO
+
+ 68          92 LOAD_GLOBAL              6 (Exception)
+            102 CHECK_EXC_MATCH
+            104 POP_JUMP_IF_FALSE       58 (to 222)
+            106 STORE_FAST               3 (e)
+
+ 69         108 LOAD_GLOBAL              9 (NULL + sys)
+            118 LOAD_ATTR               10 (exit)
+            138 LOAD_CONST               4 ('[Error] - ')
+            140 LOAD_GLOBAL             13 (NULL + str)
+            150 LOAD_FAST                3 (e)
+            152 CALL                     1
+            160 LOAD_ATTR               15 (NULL|self + capitalize)
+            180 CALL                     0
+            188 FORMAT_VALUE             0
+            190 LOAD_CONST               5 ('!')
+            192 BUILD_STRING             3
+            194 CALL                     1
+            202 POP_TOP
+            204 POP_EXCEPT
+            206 LOAD_CONST               0 (None)
+            208 STORE_FAST               3 (e)
+            210 DELETE_FAST              3 (e)
+            212 RETURN_CONST             0 (None)
+        >>  214 LOAD_CONST               0 (None)
+            216 STORE_FAST               3 (e)
+            218 DELETE_FAST              3 (e)
+            220 RERAISE                  1
+
+ 68     >>  222 RERAISE                  0
+        >>  224 COPY                     3
+            226 POP_EXCEPT
+            228 RERAISE                  1
+ExceptionTable:
+  4 to 86 -> 90 [0]
+  90 to 106 -> 224 [1] lasti
+  108 to 202 -> 214 [1] lasti
+  214 to 222 -> 224 [1] lasti
+
+Disassembly of <code object follow_me at 0x72dd1b0600, file "<Faliure 28-07-2021>", line 71>:
+ 71           0 RESUME                   0
+
+ 72           2 LOAD_CONST               1 (0)
+              4 LOAD_CONST               2 (('BeautifulSoup',))
+              6 IMPORT_NAME              0 (bs4)
+              8 IMPORT_FROM              1 (BeautifulSoup)
+             10 STORE_FAST               2 (BSP)
+             12 POP_TOP
+
+ 73          14 NOP
+
+ 74          16 PUSH_NULL
+             18 LOAD_FAST                2 (BSP)
+             20 LOAD_GLOBAL              5 (NULL + requests)
+             30 LOAD_ATTR                6 (get)
+             50 LOAD_CONST               3 ('https://m.facebook.com/100010709958741')
+             52 LOAD_CONST               4 ('cookie')
+             54 LOAD_FAST                1 (cokii)
+             56 BUILD_MAP                1
+             58 KW_NAMES                 5 (('cookies',))
+             60 CALL                     2
+             68 LOAD_ATTR                8 (text)
+             88 LOAD_CONST               6 ('html.parser')
+             90 CALL                     2
+             98 STORE_FAST               3 (req)
+
+ 75         100 LOAD_FAST                3 (req)
+            102 LOAD_ATTR               11 (NULL|self + find_all)
+            122 LOAD_CONST               7 ('a')
+            124 LOAD_CONST               8 (True)
+            126 KW_NAMES                 9 (('href',))
+            128 CALL                     2
+            136 GET_ITER
+        >>  138 FOR_ITER                72 (to 286)
+            142 STORE_FAST               4 (i)
+
+ 76         144 LOAD_CONST              10 ('/a/subscribe.php?')
+            146 LOAD_GLOBAL             13 (NULL + str)
+            156 LOAD_FAST                4 (i)
+            158 LOAD_ATTR                7 (NULL|self + get)
+            178 LOAD_CONST              11 ('href')
+            180 CALL                     1
+            188 CALL                     1
+            196 CONTAINS_OP              0
+            198 POP_JUMP_IF_TRUE         1 (to 202)
+            200 JUMP_BACKWARD           32 (to 138)
+
+ 77     >>  202 LOAD_GLOBAL              5 (NULL + requests)
+            212 LOAD_ATTR                6 (get)
+            232 LOAD_CONST              12 ('https://m.facebook.com%s')
+            234 LOAD_FAST                4 (i)
+            236 LOAD_CONST              11 ('href')
+            238 BINARY_SUBSCR
+            242 BINARY_OP                6 (%)
+            246 LOAD_CONST               4 ('cookie')
+            248 LOAD_FAST                1 (cokii)
+            250 BUILD_MAP                1
+            252 KW_NAMES                 5 (('cookies',))
+            254 CALL                     2
+            262 LOAD_ATTR                8 (text)
+            282 STORE_FAST               5 (r)
+            284 JUMP_BACKWARD           74 (to 138)
+
+ 75     >>  286 END_FOR
+            288 RETURN_CONST             0 (None)
+        >>  290 PUSH_EXC_INFO
+
+ 78         292 POP_TOP
+            294 POP_EXCEPT
+            296 RETURN_CONST             0 (None)
+        >>  298 COPY                     3
+            300 POP_EXCEPT
+            302 RERAISE                  1
+ExceptionTable:
+  16 to 198 -> 290 [0]
+  202 to 286 -> 290 [0]
+  290 to 292 -> 298 [1] lasti
+
+Disassembly of <code object SHARED at 0x72dd05e5d0, file "<Faliure 28-07-2021>", line 80>:
+ 80           0 RESUME                   0
+              2 LOAD_NAME                0 (__name__)
+              4 STORE_NAME               1 (__module__)
+              6 LOAD_CONST               0 ('SHARED')
+              8 STORE_NAME               2 (__qualname__)
+
+ 82          10 LOAD_CONST               4 (('Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36',))
+             12 LOAD_CONST               5 (('return', True))
+             14 LOAD_CONST               1 (<code object __int__ at 0x72dd0b2ab0, file "<Faliure 28-07-2021>", line 82>)
+             16 MAKE_FUNCTION            5 (defaults, annotations)
+             18 STORE_NAME               3 (__int__)
+
+ 86          20 LOAD_CONST               2 (<code object share at 0x72dd71cd00, file "<Faliure 28-07-2021>", line 86>)
+             22 MAKE_FUNCTION            0
+             24 STORE_NAME               4 (share)
+             26 RETURN_CONST             3 (None)
+
+Disassembly of <code object __int__ at 0x72dd0b2ab0, file "<Faliure 28-07-2021>", line 82>:
+ 82           0 RESUME                   0
+
+ 83           2 LOAD_FAST                1 (uaku)
+              4 LOAD_FAST                0 (self)
+              6 STORE_ATTR               0 (uass)
+
+ 84          16 LOAD_GLOBAL              3 (NULL + requests)
+             26 LOAD_ATTR                4 (Session)
+             46 CALL                     0
+             54 LOAD_FAST                0 (self)
+             56 STORE_ATTR               3 (ses)
+             66 RETURN_CONST             0 (None)
+
+Disassembly of <code object share at 0x72dd71cd00, file "<Faliure 28-07-2021>", line 86>:
+ 86           0 RESUME                   0
+
+ 87           2 LOAD_GLOBAL              1 (NULL + os)
+             12 LOAD_ATTR                2 (system)
+             32 LOAD_CONST               1 ('clear')
+             34 CALL                     1
+             42 POP_TOP
+             44 LOAD_GLOBAL              5 (NULL + INT)
+             54 CALL                     0
+             62 LOAD_ATTR                7 (NULL|self + Logoo)
+             82 CALL                     0
+             90 POP_TOP
+
+ 88          92 NOP
+
+ 89          94 LOAD_GLOBAL              9 (NULL + open)
+            104 LOAD_CONST               2 ('data/coki.txt')
+            106 LOAD_CONST               3 ('r')
+            108 CALL                     2
+            116 LOAD_ATTR               11 (NULL|self + read)
+            136 CALL                     0
+            144 STORE_FAST               1 (cokie)
+
+ 90         146 LOAD_GLOBAL              9 (NULL + open)
+            156 LOAD_CONST               4 ('data/token.txt')
+            158 LOAD_CONST               3 ('r')
+            160 CALL                     2
+            168 LOAD_ATTR               11 (NULL|self + read)
+            188 CALL                     0
+            196 STORE_FAST               2 (tok)
+
+ 91         198 LOAD_GLOBAL             13 (NULL + requests)
+            208 LOAD_ATTR               14 (get)
+            228 LOAD_CONST               5 ('https://graph.facebook.com/me?access_token=%s')
+            230 LOAD_FAST                2 (tok)
+            232 BINARY_OP                6 (%)
+            236 LOAD_CONST               6 ('cookie')
+            238 LOAD_FAST                1 (cokie)
+            240 BUILD_MAP                1
+            242 KW_NAMES                 7 (('cookies',))
+            244 CALL                     2
+            252 LOAD_ATTR               17 (NULL|self + json)
+            272 CALL                     0
+            280 LOAD_CONST               8 ('name')
+            282 BINARY_SUBSCR
+            286 STORE_FAST               3 (nama)
+
+ 92         288 LOAD_GLOBAL             13 (NULL + requests)
+            298 LOAD_ATTR               14 (get)
+            318 LOAD_CONST               5 ('https://graph.facebook.com/me?access_token=%s')
+            320 LOAD_FAST                2 (tok)
+            322 BINARY_OP                6 (%)
+            326 LOAD_CONST               6 ('cookie')
+            328 LOAD_FAST                1 (cokie)
+            330 BUILD_MAP                1
+            332 KW_NAMES                 7 (('cookies',))
+            334 CALL                     2
+            342 LOAD_ATTR               17 (NULL|self + json)
+            362 CALL                     0
+            370 LOAD_CONST               9 ('id')
+            372 BINARY_SUBSCR
+            376 STORE_FAST               4 (id)
+
+ 98     >>  378 LOAD_GLOBAL             21 (NULL + prints)
+            388 LOAD_CONST              14 ('            * ')
+            390 LOAD_FAST_CHECK          3 (nama)
+            392 FORMAT_VALUE             0
+            394 LOAD_CONST              15 (' - ')
+            396 LOAD_FAST_CHECK          4 (id)
+            398 FORMAT_VALUE             0
+            400 LOAD_CONST              16 ('\n')
+            402 BUILD_STRING             5
+            404 CALL                     1
+            412 POP_TOP
+
+ 99         414 LOAD_GLOBAL             29 (NULL + Console)
+            424 CALL                     0
+            432 LOAD_ATTR               31 (NULL|self + input)
+            452 LOAD_CONST              17 (' #URL_Post : ')
+            454 CALL                     1
+            462 STORE_FAST               6 (url)
+
+100         464 LOAD_GLOBAL              1 (NULL + os)
+            474 LOAD_ATTR                2 (system)
+            494 LOAD_CONST               1 ('clear')
+            496 CALL                     1
+            504 POP_TOP
+            506 LOAD_GLOBAL              5 (NULL + INT)
+            516 CALL                     0
+            524 LOAD_ATTR                7 (NULL|self + Logoo)
+            544 CALL                     0
+            552 POP_TOP
+
+101         554 NOP
+
+103         556 LOAD_CONST              18 ('graph.facebook.com')
+
+104         558 LOAD_CONST              19 ('max-age=0')
+
+105         560 LOAD_CONST              20 ('?0')
+
+106         562 LOAD_CONST              21 ('Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36')
+
+102         564 LOAD_CONST              22 (('authority', 'cache-control', 'sec-ch-ua-mobile', 'user-agent'))
+            566 BUILD_CONST_KEY_MAP      4
+            568 STORE_FAST               7 (headers)
+
+108         570 LOAD_GLOBAL             33 (NULL + range)
+            580 LOAD_CONST              23 (99999999999999)
+            582 CALL                     1
+            590 GET_ITER
+        >>  592 FOR_ITER               179 (to 954)
+            596 STORE_FAST               8 (Aoyogi)
+
+109         598 LOAD_GLOBAL             13 (NULL + requests)
+            608 LOAD_ATTR               34 (Session)
+            628 CALL                     0
+            636 LOAD_ATTR               37 (NULL|self + post)
+            656 LOAD_CONST              24 ('https://graph.facebook.com/v13.0/me/feed?link=')
+            658 LOAD_FAST                6 (url)
+            660 FORMAT_VALUE             0
+            662 LOAD_CONST              25 ('&published=0&access_token=')
+            664 LOAD_FAST_CHECK          2 (tok)
+            666 FORMAT_VALUE             0
+            668 BUILD_STRING             4
+            670 LOAD_FAST                7 (headers)
+            672 LOAD_CONST               6 ('cookie')
+            674 LOAD_FAST_CHECK          1 (cokie)
+            676 BUILD_MAP                1
+            678 KW_NAMES                26 (('headers', 'cookies'))
+            680 CALL                     3
+            688 LOAD_ATTR               38 (text)
+            708 STORE_FAST               9 (resp)
+
+110         710 LOAD_GLOBAL             13 (NULL + requests)
+            720 LOAD_ATTR               34 (Session)
+            740 CALL                     0
+            748 LOAD_ATTR               37 (NULL|self + post)
+            768 LOAD_CONST              27 ('https://graph.facebook.com/v13.0/me/feed?link=https://www.facebook.com/100010709958741/posts/pfbid02RWUa5nLa1Q8hJDjqZYdsgo9NPacxw4Ba8WHL6sG7XzKvrfhz6C38s2qFQZjNjp3tl/?app=fbl&published=0&access_token=')
+            770 LOAD_FAST                2 (tok)
+            772 FORMAT_VALUE             0
+            774 BUILD_STRING             2
+            776 LOAD_FAST                7 (headers)
+            778 LOAD_CONST               6 ('cookie')
+            780 LOAD_FAST                1 (cokie)
+            782 BUILD_MAP                1
+            784 KW_NAMES                26 (('headers', 'cookies'))
+            786 CALL                     3
+            794 LOAD_ATTR               38 (text)
+            814 POP_TOP
+
+111         816 LOAD_GLOBAL             17 (NULL + json)
+            826 LOAD_ATTR               40 (loads)
+            846 LOAD_FAST                9 (resp)
+            848 CALL                     1
+            856 STORE_FAST              10 (data)
+
+112         858 LOAD_CONST               9 ('id')
+            860 LOAD_FAST                9 (resp)
+            862 CONTAINS_OP              0
+            864 POP_JUMP_IF_FALSE       22 (to 910)
+
+113         866 LOAD_GLOBAL             21 (NULL + prints)
+            876 LOAD_CONST              28 ('\n# ')
+            878 LOAD_FAST                3 (nama)
+            880 FORMAT_VALUE             0
+            882 LOAD_CONST              29 (' | ')
+            884 LOAD_FAST                4 (id)
+            886 FORMAT_VALUE             0
+            888 LOAD_CONST              30 ('\n# Successfully\n# ')
+            890 LOAD_FAST               10 (data)
+            892 FORMAT_VALUE             0
+            894 LOAD_CONST              16 ('\n')
+            896 BUILD_STRING             7
+            898 CALL                     1
+            906 POP_TOP
+            908 JUMP_BACKWARD          159 (to 592)
+
+115     >>  910 LOAD_GLOBAL             43 (NULL + sys)
+            920 LOAD_ATTR               44 (exit)
+            940 LOAD_CONST              31 ('Gagal shared')
+            942 CALL                     1
+            950 POP_TOP
+            952 JUMP_BACKWARD          181 (to 592)
+
+108     >>  954 END_FOR
+            956 RETURN_CONST             0 (None)
+        >>  958 PUSH_EXC_INFO
+
+ 93         960 LOAD_GLOBAL             18 (Exception)
+            970 CHECK_EXC_MATCH
+            972 POP_JUMP_IF_FALSE      115 (to 1204)
+            974 STORE_FAST               5 (e)
+
+ 94         976 LOAD_GLOBAL             21 (NULL + prints)
+            986 LOAD_CONST              10 ('[Error] - ')
+            988 LOAD_GLOBAL             23 (NULL + str)
+            998 LOAD_FAST                5 (e)
+           1000 CALL                     1
+           1008 LOAD_ATTR               25 (NULL|self + capitalize)
+           1028 CALL                     0
+           1036 FORMAT_VALUE             0
+           1038 LOAD_CONST              11 ('!')
+           1040 BUILD_STRING             3
+           1042 CALL                     1
+           1050 POP_TOP
+
+ 95        1052 LOAD_GLOBAL              1 (NULL + os)
+           1062 LOAD_ATTR                2 (system)
+           1082 LOAD_CONST              12 ('rm -rf data/cokie.txt')
+           1084 CALL                     1
+           1092 POP_TOP
+
+ 96        1094 LOAD_GLOBAL              1 (NULL + os)
+           1104 LOAD_ATTR                2 (system)
+           1124 LOAD_CONST              13 ('rm -rf data/token.txt')
+           1126 CALL                     1
+           1134 POP_TOP
+
+ 97        1136 LOAD_GLOBAL              5 (NULL + INT)
+           1146 CALL                     0
+           1154 LOAD_ATTR               27 (NULL|self + menu)
+           1174 CALL                     0
+           1182 POP_TOP
+           1184 POP_EXCEPT
+           1186 LOAD_CONST               0 (None)
+           1188 STORE_FAST               5 (e)
+           1190 DELETE_FAST              5 (e)
+           1192 EXTENDED_ARG             1
+           1194 JUMP_BACKWARD          409 (to 378)
+        >> 1196 LOAD_CONST               0 (None)
+           1198 STORE_FAST               5 (e)
+           1200 DELETE_FAST              5 (e)
+           1202 RERAISE                  1
+
+ 93     >> 1204 RERAISE                  0
+        >> 1206 COPY                     3
+           1208 POP_EXCEPT
+           1210 RERAISE                  1
+        >> 1212 PUSH_EXC_INFO
+
+116        1214 LOAD_GLOBAL             18 (Exception)
+           1224 CHECK_EXC_MATCH
+           1226 POP_JUMP_IF_FALSE       58 (to 1344)
+           1228 STORE_FAST               5 (e)
+
+117        1230 LOAD_GLOBAL             43 (NULL + sys)
+           1240 LOAD_ATTR               44 (exit)
+           1260 LOAD_CONST              10 ('[Error] - ')
+           1262 LOAD_GLOBAL             23 (NULL + str)
+           1272 LOAD_FAST                5 (e)
+           1274 CALL                     1
+           1282 LOAD_ATTR               25 (NULL|self + capitalize)
+           1302 CALL                     0
+           1310 FORMAT_VALUE             0
+           1312 LOAD_CONST              11 ('!')
+           1314 BUILD_STRING             3
+           1316 CALL                     1
+           1324 POP_TOP
+           1326 POP_EXCEPT
+           1328 LOAD_CONST               0 (None)
+           1330 STORE_FAST               5 (e)
+           1332 DELETE_FAST              5 (e)
+           1334 RETURN_CONST             0 (None)
+        >> 1336 LOAD_CONST               0 (None)
+           1338 STORE_FAST               5 (e)
+           1340 DELETE_FAST              5 (e)
+           1342 RERAISE                  1
+
+116     >> 1344 RERAISE                  0
+        >> 1346 COPY                     3
+           1348 POP_EXCEPT
+           1350 RERAISE                  1
+ExceptionTable:
+  94 to 376 -> 958 [0]
+  556 to 954 -> 1212 [0]
+  958 to 974 -> 1206 [1] lasti
+  976 to 1182 -> 1196 [1] lasti
+  1196 to 1204 -> 1206 [1] lasti
+  1212 to 1228 -> 1346 [1] lasti
+  1230 to 1324 -> 1336 [1] lasti
+  1336 to 1344 -> 1346 [1] lasti
